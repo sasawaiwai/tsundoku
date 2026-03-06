@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias \"@/*\" --yes 2>&1)",
+      "Bash(cp -r /tmp/tsundoku/. /Users/sasa/Claude/tsundoku/ 2>&1 && ls /Users/sasa/Claude/tsundoku/)",
+      "Bash(npm install @supabase/supabase-js @supabase/ssr @zxing/library html2canvas 2>&1 | tail -5)",
+      "Bash(rm -rf node_modules package-lock.json && npm install 2>&1 | tail -5)",
+      "Bash(npm run build 2>&1 | tail -50)",
+      "Bash(node -e \"const {BrowserMultiFormatReader} = require\\('@zxing/library'\\); console.log\\(Object.getOwnPropertyNames\\(BrowserMultiFormatReader\\)\\)\" 2>&1)",
+      "Bash(node -e \"const {BrowserMultiFormatReader} = require\\('@zxing/library'\\); const r = new BrowserMultiFormatReader\\(\\); console.log\\(Object.getOwnPropertyNames\\(Object.getPrototypeOf\\(r\\)\\).filter\\(k => k.includes\\('Video'\\) || k.includes\\('Device'\\) || k.includes\\('decode'\\)\\)\\)\" 2>&1)",
+      "Bash(node -e \"const {BrowserCodeReader} = require\\('@zxing/library'\\); const r = new BrowserCodeReader\\(\\); console.log\\(Object.getOwnPropertyNames\\(Object.getPrototypeOf\\(r\\)\\).filter\\(k => k.toLowerCase\\(\\).includes\\('video'\\) || k.toLowerCase\\(\\).includes\\('device'\\) || k.toLowerCase\\(\\).includes\\('decode'\\) || k.toLowerCase\\(\\).includes\\('camera'\\)\\)\\)\" 2>&1)",
+      "Bash(node -e \"const pkg = require\\('./node_modules/next/package.json'\\); console.log\\(pkg.version\\)\" && ls node_modules/next/dist/server/proxy* 2>/dev/null | head -5)",
+      "Bash(grep -r \"proxy\" node_modules/next/dist/server/app-render/ --include=\"*.js\" -l 2>/dev/null | head -3)",
+      "Bash(npm run build 2>&1 | tail -30)",
+      "Bash(curl -s \"http://localhost:3000/api/ndl?q=坊っちゃん\" | head -c 300)",
+      "Bash(curl -sv \"http://localhost:3000/api/ndl?q=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93\" 2>&1 | tail -20)",
+      "Bash(curl -s \"https://iss.ndl.go.jp/api/opensearch?title=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93&cnt=3&mediatype=1\" | head -100)",
+      "Bash(curl -s --max-time 10 \"https://iss.ndl.go.jp/api/opensearch?title=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93&cnt=3&mediatype=1\" 2>&1 | cat)",
+      "Bash(curl -v --max-time 10 \"https://iss.ndl.go.jp/api/opensearch?title=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93&cnt=3&mediatype=1\" 2>&1 | grep -E \"^[<>*]\" | head -20)",
+      "Bash(curl -s --max-time 15 -w \"\\\\nHTTP_STATUS:%{http_code}\" \"https://iss.ndl.go.jp/api/opensearch?title=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93&cnt=3&mediatype=1\" 2>&1 | tail -5)",
+      "Bash(curl -sL --max-time 15 \"https://ndlsearch.ndl.go.jp/api/opensearch?title=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93&cnt=3&mediatype=1\" 2>&1 | cat)",
+      "Bash(curl -sL --max-time 15 \"https://ndlsearch.ndl.go.jp/api/opensearch?any=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93&cnt=3&mediatype=1\" 2>&1 | cat)",
+      "Bash(curl -sL --max-time 15 \"https://ndlsearch.ndl.go.jp/api/opensearch?title=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93&cnt=5\" 2>&1 | cat)",
+      "Bash(curl -s \"http://localhost:3000/api/ndl?q=%E5%9D%8A%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93\" | python3 -m json.tool 2>/dev/null | head -30)",
+      "Bash(git init && git remote add origin https://github.com/sasawaiwai/tsundoku.git)",
+      "Bash(git add . && git status)"
+    ]
+  }
+}
