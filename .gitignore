@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI作業用の指示書・設定（公開しない）
+CLAUDE.md
+.claude/
